@@ -1,5 +1,7 @@
 package Principals;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Titulo {
     private String titulo;
     private double duracion;
@@ -7,6 +9,9 @@ public class Titulo {
     private int cantidadDeMegusta;
     private String clasificacion;
     private String autor;
+    private int megustaUsuario;
+    private int reproducir;
+
 
     // metodo getter
     public String getTitulo(){
@@ -27,6 +32,12 @@ public class Titulo {
     public String getAutor(){
         return autor;
     }
+    public int getMegustaUsuario(){
+        return megustaUsuario;
+    }
+    public int getReproducir (){
+        return reproducir;
+    }
 
     //metodo setter
     public void setTitulo(String titulo){
@@ -46,5 +57,20 @@ public class Titulo {
     }
     public void setAutor(String autor){
         this.autor=autor;
+    }
+    public void setMegustaUsuario(int megustaUsuario){
+        this.megustaUsuario=megustaUsuario;
+    }
+    public void setReproducir(int reproducir){
+        this.reproducir=reproducir;
+    }
+    // imprimiendo caracteristicas
+    public void mostrarFichaTecnica() {
+        System.out.println("Titulo: " + titulo);
+        System.out.println("Duracion: " + duracion);
+        System.out.println("Total de reproducciones: " + totalDeReproducciones);
+        System.out.println("Cantidad de me gusta: " + cantidadDeMegusta);
+        System.out.println("Clasificacion: " + clasificacion);
+        System.out.printf("Autor: "+ autor);
     }
 }

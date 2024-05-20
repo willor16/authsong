@@ -1,8 +1,9 @@
 package multimedia;
 
+import Interfaces.LogLike;
 import Principals.Titulo;
 
-public class Podcasts extends Titulo {
+public class Podcasts extends Titulo implements LogLike {
     /*aca ya tenemos los atributos de titulo pero podemos agregar cosas como:
     -tema
     -invitado
@@ -11,7 +12,7 @@ public class Podcasts extends Titulo {
     private String tema;
     private String invitado;
     private String serie;
-
+    private int totalLikes;
     //metodo getter
     public String getTema(){
         return tema;
@@ -31,6 +32,19 @@ public class Podcasts extends Titulo {
     }
     public void setInvitado(String invitado){
         this.invitado=invitado;
+    }
+
+    @Override
+    public int setCalificacion(){
+        //para practicar el ingles xd
+
+        if (totalLikes >= 200){
+            return 3;
+        }else if (totalLikes >=100){
+            return 2;
+        }else {
+            return 1;
+        }
     }
 
 }
