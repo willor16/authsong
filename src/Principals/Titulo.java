@@ -61,7 +61,7 @@ public class Titulo {
     public void setMegustaUsuario(int megustaUsuario){
         this.megustaUsuario=megustaUsuario;
     }
-    public void setReproducir(int reproducir){
+        public void setReproducir(int reproducir){
         this.reproducir=reproducir;
     }
     // imprimiendo caracteristicas

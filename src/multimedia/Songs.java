@@ -52,6 +52,7 @@ public class Songs extends Titulo implements LogLike, InterfaceReproductor {
     @Override
     public int setreproducirAhora(){
         if (getReproducir()==1){
+            setTotalDeReproducciones(getTotalDeReproducciones()+1);
             return  1;
         }else if (getReproducir() !=2){
             return 2;
